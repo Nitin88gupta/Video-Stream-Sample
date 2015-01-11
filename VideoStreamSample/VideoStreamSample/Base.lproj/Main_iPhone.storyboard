@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="NGViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eRf-64-eMu"/>
+                        <viewControllerLayoutGuide type="bottom" id="9sh-L7-5ou"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wy9-vG-40d">
+                                <rect key="frame" x="84" y="245" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Streaming Node">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="streamNodeAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aOw-gu-b8T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOM-0h-5vf">
+                                <rect key="frame" x="84" y="293" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Client Node">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clientNodeAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TX5-7W-och"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfm-ZG-fIy">
+                                <rect key="frame" x="84" y="518" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop Streaming">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopStreamingAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gcD-vi-bEz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yOM-0h-5vf" firstAttribute="trailing" secondItem="wy9-vG-40d" secondAttribute="trailing" id="2wg-s1-Zz3"/>
+                            <constraint firstItem="wy9-vG-40d" firstAttribute="top" secondItem="eRf-64-eMu" secondAttribute="bottom" constant="225" id="3IM-TA-EJv"/>
+                            <constraint firstAttribute="centerY" secondItem="tfm-ZG-fIy" secondAttribute="centerY" constant="-249" id="6hE-9D-erk"/>
+                            <constraint firstItem="tfm-ZG-fIy" firstAttribute="top" secondItem="eRf-64-eMu" secondAttribute="bottom" constant="498" id="B5G-ew-gW9"/>
+                            <constraint firstItem="yOM-0h-5vf" firstAttribute="top" secondItem="wy9-vG-40d" secondAttribute="bottom" constant="18" id="TNo-t6-dh0"/>
+                            <constraint firstAttribute="trailing" secondItem="tfm-ZG-fIy" secondAttribute="trailing" constant="84" id="U1J-0s-isG"/>
+                            <constraint firstItem="9sh-L7-5ou" firstAttribute="top" secondItem="tfm-ZG-fIy" secondAttribute="bottom" constant="20" id="WWR-rj-slY"/>
+                            <constraint firstItem="tfm-ZG-fIy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="84" id="fwG-B6-Vw3"/>
+                            <constraint firstAttribute="centerX" secondItem="tfm-ZG-fIy" secondAttribute="centerX" id="gvN-UR-rb0"/>
+                            <constraint firstItem="yOM-0h-5vf" firstAttribute="leading" secondItem="wy9-vG-40d" secondAttribute="leading" id="kJ4-eo-ai0"/>
+                            <constraint firstItem="wy9-vG-40d" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="84" id="oy2-m8-FSe"/>
+                            <constraint firstItem="yOM-0h-5vf" firstAttribute="trailing" secondItem="tfm-ZG-fIy" secondAttribute="trailing" id="wVI-bJ-gcq"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="clientNodeBtn" destination="yOM-0h-5vf" id="aH3-bP-ewe"/>
+                        <outlet property="stopStreamNodeBtn" destination="tfm-ZG-fIy" id="5Lc-gr-Dzw"/>
+                        <outlet property="streamingBtn" destination="wy9-vG-40d" id="GEN-gT-7rg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
